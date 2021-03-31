@@ -1,0 +1,100 @@
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family:sans-serif;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+.container {
+  padding: 16px;
+  background-color: Gainsboro;
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: white;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: lightyellow;
+  outline: none;
+}
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+.registerbtn {
+  background-color:pink;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+a {
+  color: dodgerblue;
+}
+</style>
+<script>
+  function calcSum() {
+      let num1 = document.getElementsByName("mark1")[0].value;
+      let num2 = document.getElementsByName("mark2")[0].value;
+      let num3 = document.getElementsByName("mark3")[0].value;
+      let num4 = document.getElementsByName("mark4")[0].value;
+      let num5 = document.getElementsByName("mark5")[0].value;
+      let sum = Number(num1) + Number(num2) + Number(num3) + Number(num4) +Number(num5);
+      document.getElementsByName("sum")[0].value = sum;
+
+  }
+</script>
+
+</head>
+<body>
+
+<form action="">
+  <div class="container">
+    <h1>Total Mark</h1>
+    <hr>
+
+    <label for="web"><b>Advanced Software Engineering</b></label>
+    <input type="text"  name="mark1" id="web" required>
+
+
+    <label for="ds"><b>Advanced Data Structures</b></label>
+    <input type="text" name="mark2"  id="ds" required>
+
+    <label for="python"><b> Digital Fundamentals & Computer Architecture</b></label>
+    <input type="text" id="py" name="mark3" required>
+
+    <label for="android"><b>Mathematical Foundation for Computing</b></label>
+    <input type="text"  id="an" name="mark4" required>
+
+    <label for="java"><b>Web Programming Lab</b></label>
+    <input type="text" name="mark5" id="ja" required>
+
+    <hr>
+    <input type="button" class="registerbtn" onclick="calcSum()" value="Total Marks">
+    <hr>
+    <label for="total"><b>Total Marks</b></label>
+    <input type="text" id="total" name="sum" readonly>
+  </div>
+</form>
+
+</body>
+</html>
